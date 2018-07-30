@@ -1,4 +1,4 @@
-# IdentityServir4AngularOIDC
+# ASP.NET & IdentityServer4 through an Angular CoreUI and angular-oauth2-oidc
 <img src="https://www.brunobrito.net.br/content/images/2018/07/capa-redes.jpg" width="480" />
 
 Example App - IdentityServer4 login through Angular and OpenId Connect
