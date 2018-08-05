@@ -64,6 +64,7 @@ export const routes: Routes = [
       title: 'Home'
     },
     children: [
+      { path: 'cotacao', loadChildren: './views/cotacao/cotacao.module#CotacaoModule' },
       { path: 'base', loadChildren: './views/base/base.module#BaseModule' },
       { path: 'buttons', loadChildren: './views/buttons/buttons.module#ButtonsModule' },
       { path: 'charts', loadChildren: './views/chartjs/chartjs.module#ChartJSModule' },

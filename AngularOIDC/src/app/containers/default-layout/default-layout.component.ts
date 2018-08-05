@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { navItems } from '../../_nav';
-import { OAuthService } from '../../../../node_modules/angular-oauth2-oidc';
+import { OAuthService } from 'angular-oauth2-oidc';
 
 @Component({
   selector: 'app-dashboard',

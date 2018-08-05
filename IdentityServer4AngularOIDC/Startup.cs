@@ -24,7 +24,8 @@ namespace Server
                 .AddDeveloperSigningCredential()
                 .AddInMemoryIdentityResources(Config.GetIdentityResources())
                 .AddInMemoryClients(Config.GetClients())
-                .AddTestUsers(Config.GetUsers());
+                .AddTestUsers(Config.GetUsers())
+                .AddInMemoryApiResources(Config.GetApiResources());
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -33,9 +34,7 @@ namespace Server
             {
                 app.UseCors("Devlopment");
                 app.UseDeveloperExceptionPage();
-                
             }
-
 
             app.UseIdentityServer();
             app.UseStaticFiles();

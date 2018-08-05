@@ -20,6 +20,14 @@ namespace Server
             };
         }
 
+        public static IEnumerable<ApiResource> GetApiResources()
+        {
+            return new List<ApiResource>
+            {
+                new ApiResource("apiFinanceiro", "Meu WebApi Financeiro")
+            };
+        }
+
         // clients want to access resources (aka scopes)
         public static IEnumerable<Client> GetClients()
         {
@@ -42,6 +50,7 @@ namespace Server
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
                         IdentityServerConstants.StandardScopes.Email,
+                         "apiFinanceiro"
                     }
                 }
             };

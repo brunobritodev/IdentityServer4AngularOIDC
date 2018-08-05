@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { OAuthModule, AuthConfig } from 'angular-oauth2-oidc';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
@@ -48,7 +48,12 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
   imports: [
     BrowserModule,
     HttpClientModule,
-    OAuthModule.forRoot(),
+    OAuthModule.forRoot({
+      resourceServer: {
+        allowedUrls: ['http://localhost:5001'],
+        sendAccessToken: true
+      }
+    }),
     AppRoutingModule,
     AppAsideModule,
     AppBreadcrumbModule.forRoot(),
@@ -70,6 +75,6 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     UnauthorizedComponent, // -- Feature from this project
     LoginCallbackComponent // -- Feature from this project
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

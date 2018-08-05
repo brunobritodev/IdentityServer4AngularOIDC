@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
     this.oauthService.setStorage(localStorage);
     this.oauthService.tokenValidationHandler = new JwksValidationHandler();
 
+    
     await this.oauthService.loadDiscoveryDocumentAndTryLogin();
     if (this.oauthService.hasValidIdToken() || this.oauthService.hasValidAccessToken()) {
       this.router.navigate(["/dashboard"]);

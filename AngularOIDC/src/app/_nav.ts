@@ -9,6 +9,15 @@ export const navItems = [
     }
   },
   {
+    name: 'Cotacao',
+    url: '/cotacao',
+    icon: 'icon-speedometer',
+    badge: {
+      variant: 'info',
+      text: 'criptoservices'
+    }
+  },
+  {
     title: true,
     name: 'Theme'
   },

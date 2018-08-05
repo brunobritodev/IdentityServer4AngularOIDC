@@ -6,6 +6,6 @@ export const authConfig: AuthConfig = {
     clientId: 'angularoidc',
     postLogoutRedirectUri: 'http://localhost:4200/',
     redirectUri: window.location.origin + "/login-callback",
-    scope:"openid profile email",
+    scope:"openid profile email apiFinanceiro",
     oidc: true,
 }
