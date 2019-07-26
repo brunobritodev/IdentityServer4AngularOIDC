@@ -1,4 +1,7 @@
 # ASP.NET Core & IdentityServer4 - Acessando recursos protegidos
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/brunohbrito/IdentityServer4AngularOIDC.svg)](https://greenkeeper.io/)
+
 <img src="https://www.brunobrito.net.br/content/images/2018/08/capa-redes.jpg" width="480" />
 
 Example App - IdentityServer4 login through Angular and OpenId Connect
